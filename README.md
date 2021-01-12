@@ -1,8 +1,7 @@
 # DiskBackup
 Make a Full Disk Backup with DD in Linux
 
-Ref: https://bdoga.com/full-disk-backup-with-dd/ <br/>
-     https://www.linux.com/topic/desktop/full-metal-backup-using-dd-command/
+Ref: https://bdoga.com/full-disk-backup-with-dd/<br/>https://www.linux.com/topic/desktop/full-metal-backup-using-dd-command/
 
 Make a Full Disk Backup with DD ==>
 
