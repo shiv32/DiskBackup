@@ -16,6 +16,6 @@ gunzip -c backup_image.img.gz | dd of=/dev/sdc status=progress
 sudo rsync -av /media/user_name/drive1/  /media/user_name/drive2/
 
 =============== Alternatively ===========================<br/>
-ddrescue ==>
+ddrescue ==><br/>
 ref: https://www.technibble.com/guide-using-ddrescue-recover-data/ <br/>
      https://datarecovery.com/rd/how-to-clone-hard-disks-with-ddrescue/
