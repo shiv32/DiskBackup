@@ -10,3 +10,9 @@ dd if=/dev/sdc conv=sync,noerror status=progress bs=64K | gzip -c > backup_image
 Restoring a Full Drive Backup with DD ==>
 
 gunzip -c backup_image.img.gz | dd of=/dev/sdc status=progress
+
+=============== Alternatively ===========================
+
+sudo rsync -av /media/user_name/drive1/* /media/user_name/drive2/*
+
+========================================================
