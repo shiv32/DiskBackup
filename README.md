@@ -13,7 +13,7 @@ gunzip -c backup_image.img.gz | dd of=/dev/sdc status=progress
 
 =============== Alternatively ===========================
 
-sudo rsync -av /media/user_name/drive1/  /media/user_name/drive2/
+sudo rsync -av --progress --stats /media/user_name/drive1/  /media/user_name/drive2/
 
 =============== Alternatively ===========================<br/>
 ddrescue ==><br/>
