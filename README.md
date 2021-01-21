@@ -11,11 +11,11 @@ Restoring a Full Drive Backup with DD ==>
 
 gunzip -c backup_image.img.gz | dd of=/dev/sdc status=progress
 
-=============== Alternatively ===========================
-syntax ->
-rsync options SOURCE DESTINATION
+=============== Alternatively ===========================<br/>
+syntax -><br/>
+rsync options SOURCE DESTINATION<br/>
 
-eg:
+eg:<br/>
 sudo rsync -av --progress --stats /media/user_name/drive1/  /media/user_name/drive2/
 
 =============== Alternatively ===========================<br/>
