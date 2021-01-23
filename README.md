@@ -20,7 +20,7 @@ sudo rsync -av --progress --stats /media/user_name/drive1/  /media/user_name/dri
 
 compress backup --><br/>
 
-sudo tar -zcvf your_file.gz your_file/  && sudo rsync -avz --progress --stats your_file.tar.gz shiv@xxx.xxx.x.xxx:/mnt/your_dir/dir/dir/ && sync && rm your_file.tar.gz
+sudo tar -zcvf your_file.tar.gz your_file/  && sudo rsync -avz --progress --stats your_file.tar.gz shiv@xxx.xxx.x.xxx:/mnt/your_dir/dir/dir/ && sync && rm your_file.tar.gz
 <br/>
 
 decompress --> <br/>
