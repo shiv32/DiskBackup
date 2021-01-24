@@ -33,7 +33,8 @@ ref: https://www.technibble.com/guide-using-ddrescue-recover-data/ <br/>
      https://datarecovery.com/rd/how-to-clone-hard-disks-with-ddrescue/
      
 =============== Alternatively ===========================<br/>
-# tar zcvf - /wwwdata | ssh vivek@192.168.1.201 "cat > /backup/wwwdata.tar.gz" <br/>
+
+tar zcvf - /wwwdata | ssh vivek@192.168.1.201 "cat > /backup/wwwdata.tar.gz" <br/>
 
 ref: <br/>
 https://www.cyberciti.biz/faq/howto-use-tar-command-through-network-over-ssh-session/<br/>
