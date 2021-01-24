@@ -1,8 +1,6 @@
 # DiskBackup
 Make a Full Disk Backup with DD in Linux
 
-Ref: https://bdoga.com/full-disk-backup-with-dd/<br/>https://www.linux.com/topic/desktop/full-metal-backup-using-dd-command/
-
 Make a Full Disk Backup with DD ==>
 
 dd if=/dev/sdc conv=sync,noerror status=progress bs=64K | gzip -c > backup_image.img.gz
@@ -10,7 +8,8 @@ dd if=/dev/sdc conv=sync,noerror status=progress bs=64K | gzip -c > backup_image
 Restoring a Full Drive Backup with DD ==>
 
 gunzip -c backup_image.img.gz | dd of=/dev/sdc status=progress
-
+<br/>
+Ref: https://bdoga.com/full-disk-backup-with-dd/<br/>https://www.linux.com/topic/desktop/full-metal-backup-using-dd-command/<br/>
 =============== Alternatively ===========================<br/>
 syntax -><br/>
 rsync options SOURCE DESTINATION<br/>
