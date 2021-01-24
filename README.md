@@ -10,6 +10,7 @@ Restoring a Full Drive Backup with DD ==>
 gunzip -c backup_image.img.gz | dd of=/dev/sdc status=progress
 <br/>
 Ref: https://bdoga.com/full-disk-backup-with-dd/<br/>https://www.linux.com/topic/desktop/full-metal-backup-using-dd-command/<br/>
+
 =============== Alternatively ===========================<br/>
 syntax -><br/>
 rsync options SOURCE DESTINATION<br/>
