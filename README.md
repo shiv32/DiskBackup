@@ -34,10 +34,16 @@ ref: https://www.technibble.com/guide-using-ddrescue-recover-data/ <br/>
      https://datarecovery.com/rd/how-to-clone-hard-disks-with-ddrescue/
      
 =============== Alternatively ===========================<br/>
+compress backup --><br/>
 
 tar zcvf - /wwwdata | ssh vivek@192.168.1.201 "cat > /backup/wwwdata.tar.gz" && sync<br/>
+
+decompress --> <br/>
+
+ssh remotehost cat /path/to/foo.tar.gz | tar zxvf -
 
 ref: <br/>
 https://www.cyberciti.biz/faq/howto-use-tar-command-through-network-over-ssh-session/<br/>
 https://www.computernetworkingnotes.com/linux-tutorials/create-and-restore-incremental-backups-in-linux-with-tar.html<br/>
+https://stackoverflow.com/questions/50796631/how-do-i-extract-a-remote-tarball-on-to-local-machine <br/>
      
