@@ -40,7 +40,7 @@ tar zcvf - /wwwdata | ssh vivek@192.168.1.201 "cat > /backup/wwwdata.tar.gz" && 
 
 decompress --> <br/>
 
-ssh remotehost cat /path/to/foo.tar.gz | tar zxvf -
+ssh remotehost cat /path/to/foo.tar.gz | tar zxvf - && sync
 
 ref: <br/>
 https://www.cyberciti.biz/faq/howto-use-tar-command-through-network-over-ssh-session/<br/>
