@@ -10,7 +10,8 @@ Restoring a Full Drive Backup with DD ==>
 gunzip -c backup_image.img.gz | dd of=/dev/sdc status=progress
 
 <br/>
-Ref: https://bdoga.com/full-disk-backup-with-dd/<br/>https://www.linux.com/topic/desktop/full-metal-backup-using-dd-command/<br/>
+Ref:<br/>
+https://bdoga.com/full-disk-backup-with-dd/<br/>https://www.linux.com/topic/desktop/full-metal-backup-using-dd-command/<br/>
 
 =============== Alternatively ===========================<br/>
 syntax -><br/>
@@ -30,8 +31,9 @@ tar -zxvf your_file.tar.gz
 
 =============== Alternatively ===========================<br/>
 ddrescue ==><br/>
-ref: https://www.technibble.com/guide-using-ddrescue-recover-data/ <br/>
-     https://datarecovery.com/rd/how-to-clone-hard-disks-with-ddrescue/
+ref:<br/>
+https://www.technibble.com/guide-using-ddrescue-recover-data/ <br/>
+https://datarecovery.com/rd/how-to-clone-hard-disks-with-ddrescue/
      
 =============== Alternatively ===========================<br/>
 compress backup --><br/>
