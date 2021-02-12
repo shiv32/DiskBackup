@@ -38,6 +38,10 @@ https://datarecovery.com/rd/how-to-clone-hard-disks-with-ddrescue/
 =============== Alternatively ===========================<br/>
 compress backup --><br/>
 
+In same machine --> <br/>
+tar zcvf destination_path/your_file.tar.gz source_path && sync
+
+In different machine --> <br/>
 tar zcvf - /wwwdata | ssh vivek@192.168.1.201 "cat > /backup/wwwdata.tar.gz" && sync<br/>
 
 decompress --> <br/>
