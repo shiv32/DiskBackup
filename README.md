@@ -20,6 +20,10 @@ rsync options SOURCE DESTINATION<br/>
 eg:<br/>
 sudo rsync -av --progress --stats /media/user_name/drive1/  /media/user_name/drive2/
 
+delete extraneous files from destination dirs<br/>
+exclude files matching PATTERN<br/>
+sudo rsync -av --delete --progress --stats . --exclude=".cache" shiv@xxx.xxx.x.x:/media/shiv/xyz/xxx_backups/xxxx/
+
 compress backup --><br/>
 
 sudo tar -zcvf your_file.tar.gz your_file/  && sudo rsync -avz --progress --stats your_file.tar.gz shiv@xxx.xxx.x.xxx:/mnt/your_dir/dir/dir/ && sync && rm your_file.tar.gz
