@@ -22,7 +22,7 @@ sudo rsync -av --progress --stats /media/user_name/drive1/  /media/user_name/dri
 
 delete extraneous files from destination dirs<br/>
 exclude files matching PATTERN<br/>
-sudo rsync -av --delete --progress --stats . --exclude=".cache" shiv@xxx.xxx.x.x:/media/shiv/xyz/xxx_backups/xxxx/
+sudo rsync -av --delete --progress --stats . --exclude=".cache" shiv@xxx.xxx.x.x:/media/shiv/xyz  /xxx_backups/xxxx/
 
 
 rsync: chown failed: Operation not permitted (1) --><br/>
