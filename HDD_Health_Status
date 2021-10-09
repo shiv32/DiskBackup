@@ -84,11 +84,16 @@ Scan the bad blocks(It will take some time):
 
 sudo badblocks -vs /dev/sdb
 ----------------------------------------------------------
+Check serial no. of HDD :
+$sudo lshw -class disk
+
+
 ********************************************************************************************
 ref: 
 https://www.howtoforge.com/tutorial/monitor-harddisk-with-smartmon-on-ubuntu/
 https://en.wikipedia.org/wiki/Power-on_hours
 https://www.tutorialspoint.com/how-to-find-out-bad-sectors-on-your-linux-hard-disk
+https://unix.stackexchange.com/questions/121757/harddisk-serial-number-from-terminal
 *********************************************************************************************
 
 
