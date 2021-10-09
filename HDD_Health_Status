@@ -1,0 +1,96 @@
+
+******************************************************************
+Check HDD(External/Internal) Health on Linux(Ubuntu 18.04) -->
+******************************************************************
+
+--------------------------------------------------------
+Install smartmontools on your system:
+sudo apt install smartmontools
+
+--------------------------------------------------------
+Get the information about Block Devices(HDD External/Internal) on your machine : 
+
+$lsblk
+
+O/P:
+sdb      8:16   0 298.1G  0 disk 
+└─sdb1   8:17   0 298.1G  0 part /media/shiv/your_hdd_drive
+
+
+Or
+
+$df -h
+/dev/sdb1       299G   29G  270G  10% /media/shiv/your_hdd_drive
+
+Or 
+
+$sudo fdisk -lu /dev/sdb
+
+--------------------------------------------------------
+
+------------------------------------------------------------
+Check if your drive is actually SMART type:
+
+sudo smartctl -i /dev/sdb
+------------------------------------------------------------
+
+------------------------------------------------------------
+Enable SMART service :
+
+sudo smartctl -s on /dev/sdb
+------------------------------------------------------------
+
+--------------------------------------------------------
+Get complete SMART information:
+
+sudo smartctl -a  /dev/sdb
+
+
+In o/p:
+197 Current_Pending_Sector  0x0012   100   100   000    Old_age   Always       -       8
+198 Offline_Uncorrectable   0x0010   100   100   000    Old_age   Offline      -       8
+
+means there are 8 bad sectors.
+
+
+In o/p:
+ 9 Power_On_Hours          0x0032   083   083   000    Old_age   Always       -       6934
+
+Note : Here 6934 is in Hour(HDD Age)
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+Check your hard drive's status:
+
+sudo smartctl -H /dev/sdb
+
+Note : If the output shows any error, better run a backup.
+--------------------------------------------------------
+
+----------------------------------------------------------
+HDD age : 
+
+sudo smartctl -a /dev/sdb | grep Power_On_Hours
+
+o/p:
+ 9 Power_On_Hours          0x0032   083   083   000    Old_age   Always       -       6934
+
+Note : Here 6934 is in Hour
+----------------------------------------------------------
+
+----------------------------------------------------------
+Scan the bad blocks(It will take some time):
+
+sudo badblocks -vs /dev/sdb
+----------------------------------------------------------
+********************************************************************************************
+ref: 
+https://www.howtoforge.com/tutorial/monitor-harddisk-with-smartmon-on-ubuntu/
+https://en.wikipedia.org/wiki/Power-on_hours
+https://www.tutorialspoint.com/how-to-find-out-bad-sectors-on-your-linux-hard-disk
+*********************************************************************************************
+
+
+
+
